@@ -1,0 +1,119 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;;
+}
+
+.container
+{
+    height:100vh;
+}
+
+.notes
+{
+    width:90%;
+    height:85%;
+    margin: 1.6rem auto;
+    border:.1rem solid #f88d8d;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/-1;
+    gap: 2.4rem;
+    grid-auto-rows: calc(50%);
+}
+
+.search 
+{
+    width: 85%;
+    margin: 1.6rem auto;
+    border:.1rem solid #000;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    height: calc(35%);
+    gap: 1rem;
+    
+}
+.search label
+    {
+       margin-left: 1.6rem;
+       font-size: 2.4rem;
+    }
+    .search select
+    {
+        margin-left: 1.6rem;
+        width: calc(60%);
+        height: 2rem;
+        
+    }
+
+.searchNote{
+    margin-left: 1.6rem;
+    width:30rem;
+    height:2.5rem;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.note{
+   margin : 1.6rem 1.6rem;
+   border : .1rem solid #ddd;
+   border-left: 1.2rem solid rgb(245, 167, 241); 
+   border-radius: 1rem;
+   padding: .5rem;
+   height: calc(95%)
+}
+
+
+.notes h2{
+    font-size: 1.8rem;
+    color: rgb(89, 102, 245);
+    margin-bottom: 3.5rem;
+}
+
+.notes p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+@media screen and (min-width:768px)
+{
+    .search 
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 25%;
+    }
+
+    .search label
+    {
+       margin-left: 3.2rem;
+       font-size: 2.4rem;
+    }
+    .search select
+    {
+        margin-left: .8rem;
+        width: 15rem;
+        height: 3rem;
+        
+    }
+    .notes{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: span 1;
+        /* height: auto; */
+        grid-auto-rows: calc(50%);
+    }
+
+    .note{
+        height: calc(50%);
+        
+    }
+}

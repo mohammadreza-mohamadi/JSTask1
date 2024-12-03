@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+          <div>
+            <input onchange="onSearch(event)" type="text" class="searchNote" placeholder="enter note title ..." />
+          </div>
+          <div>
+              <label for="sort">SortBy :</label>
+              <select id="ascOrDesc">
+                 <option value="ASC">ASC</option>
+                 <option value="DESC">DESC</option>
+              </select>
+          </div>
+          <div>
+              <label for="filter">filter : </label>
+              <select id="filterSelect">
+                <option value="ID">ID</option>
+                <option value="CreatedAt">CretaedAt</option>
+             </select>
+          </div>
+          <div>
+            <label for="completed">completed :</label>
+            <select id="isComplete" onchange="isComplete(event)">
+               <option value="true">yes</option>
+               <option value="false">no</option>
+            </select>
+        </div>
+        </div>
+        <div class="notes">
+            <!-- <div class="note">
+                <h2>title</h2>
+                <p>created at :</p>
+                <input type="checkbox" checked/>
+            </div> -->
+        </div>
+    </div>
+    <!-- <script src="./scripts/task1.js"></script> -->
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
